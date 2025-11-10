@@ -59,7 +59,8 @@ services:
     ports:
       - "9090:9090"
     links:
-      - app:app
+      - python-app:python-app
+      - spring-app:spring-app
       - alertmanager:alertmanager
     restart: always
     deploy:
