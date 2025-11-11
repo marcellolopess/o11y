@@ -1,7 +1,7 @@
 ### https://prometheus.io/docs/alerting/latest/configuration/#slack_config
 
 global:
-  slack_api_url: 'https://hooks.slack.com/services/XYZ/XYZ/XYZ'
+  slack_api_url: 'https://hooks.slack.com/services/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'
 
 route:
   receiver: 'slack-notifications'
