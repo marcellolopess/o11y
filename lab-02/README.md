@@ -1,10 +1,24 @@
-# Hands-On Kubernetes
+# Observability com Kubernetes utilizando CloudWatch
 
-Bem-vindos ao laboratório de hands-on de Kubernetes! Durante esta atividade, você irá aprender como criar um cluster Kubernetes utilizando o Elastic Kubernetes Service (EKS) e entender os principais componentes que formam um cluster Kubernetes.
+## Introdução
 
-Vamos abordar como criar o deploy de aplicação e quais são componentes necessários, além de escalar o ambiente, verificar os logs dos contêineres e acessar um Pod via SSH.
+Bem-vindo ao laboratório prático de observabilidade em Kubernetes! Neste hands-on, você aprenderá a implementar uma estratégia completa de monitoramento, logging e tracing para aplicações containerizadas rodando no Amazon Elastic Kubernetes Service (EKS).
 
-Ao final deste laboratório, você passará a entender os principais componentes do kubernetes, apto a criar e gerenciar seus próprios clusters Kubernetes na AWS, utilizando as melhores práticas para orquestração de contêineres. Vamos começar!
+A observabilidade é fundamental para entender o comportamento das suas aplicações em produção. Com as três pilares — logs, métricas e tracing — você terá visibilidade total sobre a saúde, desempenho e disponibilidade do seu cluster Kubernetes.
+
+## Objetivos
+
+Ao final deste laboratório, você será capaz de:
+
+- **Provisionar um cluster EKS** na AWS seguindo as melhores práticas
+- **Implantar e gerenciar aplicações** usando manifestos Kubernetes (Deployments, Services, Namespaces)
+- **Configurar observability** com Amazon CloudWatch Container Insights
+- **Monitorar métricas** do cluster e dos containers em tempo real
+- **Coletar e visualizar logs** de aplicações e componentes do cluster
+- **Realizar operações essenciais**: scaling, rollback de versões e troubleshooting
+- **Otimizar desempenho** e identificar gargalos usando dados de observabilidade
+
+**Vamos começar! 🚀**
 
 
 ## O que é o EKS
@@ -908,9 +922,21 @@ Excluindo o <b>Node Group</b> do Cluster EKS.
 ![](img/eks-48.png)
 
 
+// ...existing code...
 ### Conclusão
-Pronto, você acaba de concluir o laboratório de hands-on de EKS!
 
-Durante este laboratório, você aprendeu como criar um cluster EKS e alguns dos principais componentes que compõem um cluster Kubernetes. Você também aprendeu como criar um namespace, deployment, service do tipo load balancer e realizar o scaling e rollback de versão da app.
+Parabéns — você concluiu o laboratório de Observability com Kubernetes (EKS).
 
-Este conhecimento é fundamental para quem deseja entender e trabalhar com Kubernetes, uma das plataformas mais utilizadas no mundo para orquestração de containers. Esperamos que este laboratório tenha sido útil para você e que agora você se sinta mais confiante para trabalhar com Kubernetes em seu ambiente. Parabéns novamente e continue praticando!
+Neste hands‑on você:
+- Provisionou um cluster EKS e node groups.
+- Implantou e expôs uma aplicação (Namespace, Deployment, Service).
+- Ativou observability do cluster com Amazon CloudWatch Container Insights (métricas e logs).
+- Realizou operações essenciais: scaling, rollout, rollback e troubleshooting com kubectl.
+
+Próximos passos:
+- Instrumentar aplicações para expor métricas no formato Prometheus e enviar logs para Grafana Loki.
+- Configurar Prometheus, Grafana (dashboards) e Alertmanager para alertas integrados (por exemplo, Slack).
+- Integrar tracing (OpenTelemetry / Jaeger) para análise de latência e dependências.
+- Automatizar a criação do ambiente com IaC (Terraform/CloudFormation) e integrar em pipelines CI/CD.
+
+Este laboratório fornece a base prática para implementar uma estratégia completa de observability (métricas, logs, tracing e alertas) em Kubernetes. Continue praticando e evoluindo a instrumentação das suas aplicações.
